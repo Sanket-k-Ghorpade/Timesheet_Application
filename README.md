@@ -1,4 +1,4 @@
-Timesheet Management Application
+#### Timesheet Management Application
 This repository contains the source code for a full-stack timesheet management system, built with a secure ASP.NET Core backend and a clean, responsive vanilla JavaScript frontend.
 
 ## Key Features
