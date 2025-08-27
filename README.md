@@ -1,57 +1,51 @@
-#### Timesheet Management Application
-This repository contains the source code for a full-stack timesheet management system, built with a secure ASP.NET Core backend and a clean, responsive vanilla JavaScript frontend.
+# ⏱️ Timesheet Management Application
 
-## Key Features
-Secure User Management: Includes endpoints for employee registration and JWT-based authentication.
+This repository contains the source code for a **full-stack timesheet management system**, built with a **secure ASP.NET Core backend** and a **clean, responsive vanilla JavaScript frontend**.
 
-Full CRUD Operations: Authenticated users can create, read, update, and delete their own timesheet entries.
+---
 
-Protected API: Role-based access control is implicitly handled by ensuring users can only access their own data.
+## 🚀 Key Features
 
-Clean Architecture: The backend is designed with a layered architecture to ensure separation of concerns and maintainability.
+- **🔐 Secure User Management** – Employee registration and JWT-based authentication.  
+- **📝 Full CRUD Operations** – Authenticated users can create, read, update, and delete their own timesheet entries.  
+- **🛡️ Protected API** – Role-based access control ensures users can only access their own data.  
+- **🏗️ Clean Architecture** – Layered design for separation of concerns and maintainability.  
+- **🗄️ Database First Approach** – Schema managed and versioned with EF Core migrations.  
 
-Database First Approach: The database schema is managed and versioned using Entity Framework Core migrations.
+---
 
-## Tech Stack & Architecture
-This application is built using modern .NET practices and a decoupled architecture.
+## 🛠️ Tech Stack & Architecture
 
-Framework: ASP.NET Core 8
+### Backend
+- **Framework:** ASP.NET Core 8  
+- **Data Access:** Entity Framework Core 8  
+- **Database:** SQL Server  
+- **Architecture:**
+  - Layered Architecture (Controllers → Services → Repositories)  
+  - Repository Pattern  
+  - Dependency Injection  
+- **API Design:** RESTful, with DTOs for a clear API contract  
 
-Data Access: Entity Framework Core 8
+### Frontend
+- **JavaScript (ES6+)**  
+- **Bootstrap 5** for responsive styling  
+- **HTML5**  
 
-Database: SQL Server
+---
 
-Architecture:
+## ⚡ Getting Started
 
-Layered Architecture (Controllers, Services, Repositories)
+### Backend Setup
+1. Open `Timesheet_Application_Backend.sln` in **Visual Studio**.  
+2. Update the `DefaultConnection` string in `appsettings.Development.json` to point to your **SQL Server instance**.  
+3. Run the following in **Package Manager Console** to apply migrations:  
+   ```powershell
+   Update-Database
 
-Repository Pattern
+### Frontend Setup
 
-Dependency Injection
+1. Open the Timesheet_Application_Frontend folder in your code editor.
 
-API Design: RESTful, using Data Transfer Objects (DTOs) to define a clear API contract.
+2. In script.js, update the apiBaseUrl variable to match your running backend’s URL.
 
-Frontend:
-
-Vanilla JavaScript (ES6+)
-
-Bootstrap 5 for styling
-
-HTML5
-
-## Getting Started
-Backend Setup
-Open the Timesheet_Application_Backend.sln file in Visual Studio.
-
-Update the DefaultConnection string in appsettings.development.json to point to your SQL Server instance.
-
-In the Package Manager Console, run Update-Database to apply migrations.
-
-Run the project (F5).
-
-Frontend Setup
-Open the Timesheet_Application_Frontend folder in a code editor.
-
-In script.js, update the apiBaseUrl variable to match your running backend's URL.
-
-Open index.html in a web browser.
+3. Open index.html in a browser.
