@@ -1,54 +1,57 @@
 Timesheet Management Application
-This is a full-stack web application for managing employee timesheets, built with an ASP.NET Core Web API backend and a vanilla HTML, CSS, and JavaScript frontend.
+This repository contains the source code for a full-stack timesheet management system, built with a secure ASP.NET Core backend and a clean, responsive vanilla JavaScript frontend.
 
-Features
-Employee Registration & Login: Secure user account creation and authentication.
+## Key Features
+Secure User Management: Includes endpoints for employee registration and JWT-based authentication.
 
-JWT Authentication: The API is secured using JSON Web Tokens to protect endpoints.
+Full CRUD Operations: Authenticated users can create, read, update, and delete their own timesheet entries.
 
-Timesheet CRUD: Authenticated users can create, read, update, and delete their own timesheet entries.
+Protected API: Role-based access control is implicitly handled by ensuring users can only access their own data.
 
-Clean Architecture: The backend follows a repository-service pattern for a clear separation of concerns.
+Clean Architecture: The backend is designed with a layered architecture to ensure separation of concerns and maintainability.
 
-Database Migrations: The database schema is managed using Entity Framework Core migrations.
+Database First Approach: The database schema is managed and versioned using Entity Framework Core migrations.
 
-Tech Stack
-Backend
-ASP.NET Core 8 Web API
+## Tech Stack & Architecture
+This application is built using modern .NET practices and a decoupled architecture.
 
-Entity Framework Core 8
+Framework: ASP.NET Core 8
 
-SQL Server
+Data Access: Entity Framework Core 8
 
-JWT Bearer Authentication
+Database: SQL Server
 
-Frontend
-HTML5
+Architecture:
 
-CSS3 (with Bootstrap 5 for styling)
+Layered Architecture (Controllers, Services, Repositories)
+
+Repository Pattern
+
+Dependency Injection
+
+API Design: RESTful, using Data Transfer Objects (DTOs) to define a clear API contract.
+
+Frontend:
 
 Vanilla JavaScript (ES6+)
 
-Getting Started
-1. Backend Setup
+Bootstrap 5 for styling
+
+HTML5
+
+## Getting Started
+Backend Setup
 Open the Timesheet_Application_Backend.sln file in Visual Studio.
 
-In appsettings.development.json, update the DefaultConnection string to point to your SQL Server instance.
+Update the DefaultConnection string in appsettings.development.json to point to your SQL Server instance.
 
-Open the Package Manager Console and run Update-Database to apply the migrations and create the database schema.
+In the Package Manager Console, run Update-Database to apply migrations.
 
-Run the project (press F5).
+Run the project (F5).
 
-2. Frontend Setup
-Open the Timesheet_Application_Frontend folder in a code editor like VS Code.
+Frontend Setup
+Open the Timesheet_Application_Frontend folder in a code editor.
 
-In script.js, update the apiBaseUrl variable to match the URL of your running backend (e.g., https://localhost:7207/api).
+In script.js, update the apiBaseUrl variable to match your running backend's URL.
 
-Open the index.html file in a web browser.
-
-How to Use
-Register: Create a new employee account from the registration page.
-
-Login: Use the registered credentials to log in. You will receive a JWT token which is stored in the browser's session storage.
-
-Manage Timesheets: Once logged in, you can view, add, edit, and delete your timesheet entries. All requests to the timesheet API are authenticated using the stored token.
+Open index.html in a web browser.
