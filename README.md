@@ -1,5 +1,5 @@
 Timesheet Management Application
-This is a full-stack web application for managing employee timesheets, built with an ASP.NET Core Web API backend and for frontend; HTML, CSS, Bootstrap, and Venilla JavaScript is used.
+This is a full-stack web application for managing employee timesheets, built with an ASP.NET Core Web API backend and a vanilla HTML, CSS, and JavaScript frontend.
 
 Features
 Employee Registration & Login: Secure user account creation and authentication.
@@ -37,7 +37,7 @@ In appsettings.development.json, update the DefaultConnection string to point to
 
 Open the Package Manager Console and run Update-Database to apply the migrations and create the database schema.
 
-Run the project.
+Run the project (press F5).
 
 2. Frontend Setup
 Open the Timesheet_Application_Frontend folder in a code editor like VS Code.
